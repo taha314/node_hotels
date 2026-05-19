@@ -4,6 +4,7 @@ const person = require('./models/person'); // Adjust the path as needed
 
 passport.use(new LocalStrategy(async (USERNAME, password, done) => {
     try{
+
         // console.log("Recieved CREDENTIALS:", USERNAME, password);
         const user = await person.findOne({ username: USERNAME });
         if (!user)

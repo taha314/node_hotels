@@ -59,7 +59,7 @@ personSchema.pre('save', async function(next) {
         next();
     }
     catch(err){
-        return next(err);
+        return (err);
     }
 });
 
